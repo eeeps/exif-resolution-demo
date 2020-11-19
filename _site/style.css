@@ -1,0 +1,92 @@
+html {
+	font-family: system-ui;
+}
+a {
+	color: #f500e0;
+	text-underline-offset: 3%;
+	text-decoration-thickness: from-font;
+	text-decoration-color: #f2d8ec;
+}
+a:hover {
+	text-decoration-color: #f500e0;
+}
+
+h1 {
+	text-align: center;
+	letter-spacing: -0.1ch;
+	margin: 3rem;
+	font-size: 3em;
+	filter:
+		drop-shadow(2px 2px 0 #ffee00)
+		drop-shadow(2px 2px 0 #ffb400)
+		drop-shadow(2px 2px 0 #ff7a42)
+		drop-shadow(2px 2px 0 #ff4790)
+		drop-shadow(2px 2px 0 #f500e0)
+		drop-shadow(2px 2px 0 #00e4ff)
+		drop-shadow(2px 2px 0 #00dbbd)
+		drop-shadow(2px 2px 0 #00be43);
+}
+main {
+	padding: 0.5rem;
+}
+main > * { 
+	max-width: 60ch;
+	margin: auto;
+}
+article > h2 {
+	line-height: 1;
+	margin: 0;
+}
+article > time {
+	color: gray;
+}
+.gray {
+	--gray: #ddd;
+	background-color: var(--gray);
+	color: var(--gray);
+	line-height: 1.5;
+
+	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	image-rendering: pixelated;
+	background-color: #eee;
+}
+
+figcaption {
+	text-align: right;
+	color: #888;
+	font-size: 0.75em;
+}
+
+nav {
+	text-align: center;
+	margin: 5em;
+	padding: 1em;
+	padding-bottom: 4em;
+}
+article {
+	padding-top: 4em;
+}
+figure {
+	margin: 1em;
+	display: grid;
+	justify-content: center;
+}
+figure > img {
+	border-radius: 0.5em;
+}
+nav > a {
+	color: white;
+	background: black;
+	border-radius: 1ch;
+	padding: 1em;
+	font-weight: 900;
+	text-decoration: none;
+}
+nav > a:hover {
+	background: red;
+}
