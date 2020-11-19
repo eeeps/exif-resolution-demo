@@ -5,7 +5,8 @@ module.exports = function( eleventyConfig ) {
 	eleventyConfig.addPassthroughCopy("lazyload.js");
 
 	eleventyConfig.addShortcode( "image", function( img ) { 
-		return `<figure>
+		return `
+<figure>
 	<img
 		src="${ img[ 'lqip_with_exif_url' ] }"
 		data-fullsrc="${ img[ '2x_with_exif_url'] }"
@@ -13,7 +14,8 @@ module.exports = function( eleventyConfig ) {
 	<figcaption>
 		${ img[ 'credit' ] } 
 	</figcaption>
-</figure>`;
+</figure>
+`;
 	} );
 };
 
