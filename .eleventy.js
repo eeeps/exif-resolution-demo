@@ -7,8 +7,12 @@ module.exports = function( eleventyConfig ) {
 	eleventyConfig.addShortcode( "image", function( img ) { 
 		return `<figure>
 	<img
-		src="${ img[ 'lqip_with_exif_url' ] }"
-		data-fullsrc="${ img[ '2x_with_exif_url'] }"
+		src="${ img[ '1x_url' ] }"
+		srcset="${ img[ '2x_with_exif_url'] } 2x"
+		style="background-image: url( ${ img[ 'lqip_with_exif_url'] } )"
+		width="${ img[ 'resizedWidth' ] }"
+		height="${ img[ 'resizedHeight' ] }"
+		loading="lazy"
 	/>
 	<figcaption>
 		${ img[ 'credit' ] } 

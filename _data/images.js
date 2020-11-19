@@ -47,14 +47,27 @@ module.exports = ( data ) => {
 		}
 	];
 	return input.reduce( ( images, image ) => {
-		const { id, unsplash_name, unsplash_account } = image;
+		const { id, unsplash_name, unsplash_account, width, height } = image;
+
+		const maxLength = 400;
+		let resizedWidth, resizedHeight;
+		if ( width > height ) {
+			resizedWidth = maxLength;
+			resizedHeight = Math.ceil( ( resizedWidth / width ) * height );
+		} else {
+			resizedHeight = maxLength;
+			resizedWidth = Math.ceil( ( resizedHeight / height ) * width );
+		}
+		
 		images[ id ] = {
 			"1x_url": `/images/1x/${ id }.jpg`,
 			"2x_with_exif_url": `/images/2x/exif/${ id }.jpg`,
 			"2x_without_exif_url": `/images/2x/no-exif/${ id }.jpg`,
 			lqip_with_exif_url: `/images/lqip/exif/${ id }.jpg`,
 			lqip_without_exif_url: `/images/lqip/no-exif/${ id }.jpg`,
-			credit: `<span>Photo by <a href=\"https://unsplash.com/@${ unsplash_account }?utm_source=unsplash&amp,utm_medium=referral&amp,utm_content=creditCopyText\">${ unsplash_name }</a> on <a href=\"https://unsplash.com/s/photos/pizza?utm_source=unsplash&amp,utm_medium=referral&amp,utm_content=creditCopyText\">Unsplash</a></span>`
+			credit: `<span>Photo by <a href=\"https://unsplash.com/@${ unsplash_account }?utm_source=unsplash&amp,utm_medium=referral&amp,utm_content=creditCopyText\">${ unsplash_name }</a> on <a href=\"https://unsplash.com/s/photos/pizza?utm_source=unsplash&amp,utm_medium=referral&amp,utm_content=creditCopyText\">Unsplash</a></span>`,
+			resizedWidth: resizedWidth,
+			resizedHeight: resizedHeight
 		};
 		return images;
 	}, {} );
