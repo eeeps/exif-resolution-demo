@@ -1,5 +1,12 @@
 module.exports = function(data) {
 
+const preloads =  Object.keys( data.images )
+	.map( k => {
+		const url = data.images[ k ].lqip_with_exif_url;
+		return `<link rel="preload" href="${ url }" as="image" />`;
+	} )
+	.join('\n');
+
 	return `
 
 <!doctype html>
@@ -8,6 +15,7 @@ module.exports = function(data) {
 <meta name="viewport" content="width=device-width" />
 <title>Pizza Time!</title>
 <link rel="stylesheet" href="/style.css" />
+${ preloads }
 </head>
 <body>
 
