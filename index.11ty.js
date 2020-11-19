@@ -8,6 +8,7 @@ module.exports = function(data) {
 <meta name="viewport" content="width=device-width" />
 <title>Pizza Time!</title>
 <link rel="stylesheet" href="/style.css" />
+<script defer src="/lazyload.js" />
 </head>
 <body>
 

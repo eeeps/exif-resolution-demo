@@ -2,13 +2,13 @@ module.exports = function( eleventyConfig ) {
 
 	eleventyConfig.addPassthroughCopy("images");
 	eleventyConfig.addPassthroughCopy("style.css");
+	eleventyConfig.addPassthroughCopy("lazyload.js");
 
 	eleventyConfig.addShortcode( "image", function( img ) { 
 		return `<figure>
 	<img
 		src="${ img[ 'lqip_with_exif_url' ] }"
 		data-fullsrc="${ img[ '2x_with_exif_url'] }"
-		loading="lazy"
 	/>
 	<figcaption>
 		${ img[ 'credit' ] } 
