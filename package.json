@@ -1,0 +1,23 @@
+{
+  "name": "exif-resolution-demo",
+  "version": "1.0.0",
+  "description": "Demoing using EXIF to scale images on the web (intrinsically!)",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eeeps/exif-resolution-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eeeps/exif-resolution-demo/issues"
+  },
+  "homepage": "https://github.com/eeeps/exif-resolution-demo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
