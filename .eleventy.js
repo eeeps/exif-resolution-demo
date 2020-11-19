@@ -8,6 +8,7 @@ module.exports = function( eleventyConfig ) {
 	<img
 		src="${ img[ 'lqip_with_exif_url' ] }"
 		data-fullsrc="${ img[ '2x_with_exif_url'] }"
+		loading="lazy"
 	/>
 	<figcaption>
 		${ img[ 'credit' ] } 
