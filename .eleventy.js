@@ -9,8 +9,7 @@ module.exports = function( eleventyConfig ) {
 <figure>
 	<img
 		src="${ img[ 'lqip_with_exif_url' ] }"
-		data-srcset="${ img[ '1x_url'] } 1x,
-		             ${ img[ '2x_without_exif_url'] } 2x"
+		data-src="${ img[ '1x_url'] }"
 		class="lazyload"
 	/>
 	<figcaption>
