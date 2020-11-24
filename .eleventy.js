@@ -8,7 +8,6 @@ module.exports = function( eleventyConfig ) {
 		return `<figure>
 	<img
 		src="${ img[ '1x_url' ] }"
-		srcset="${ img[ '2x_with_exif_url'] } 2x"
 		style="background-image: url( ${ img[ 'lqip_with_exif_url'] } )"
 		width="${ img[ 'resizedWidth' ] }"
 		height="${ img[ 'resizedHeight' ] }"
