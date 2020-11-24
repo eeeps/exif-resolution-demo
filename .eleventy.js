@@ -2,7 +2,7 @@ module.exports = function( eleventyConfig ) {
 
 	eleventyConfig.addPassthroughCopy("images");
 	eleventyConfig.addPassthroughCopy("style.css");
-	eleventyConfig.addPassthroughCopy("lazyload.js");
+	eleventyConfig.addPassthroughCopy("lazysizes.min.js");
 
 	eleventyConfig.addShortcode( "image", function( img ) { 
 		return `
